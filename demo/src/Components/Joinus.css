@@ -1,0 +1,52 @@
+.Join {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+  }
+  
+  /* Adjustments for larger screens, if needed */
+  @media (min-width: 1025px) {
+    .Join {
+      margin-left: 50px; /* Default for larger screens */
+    }
+  }
+  
+  /* Tablet View (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .Join {
+      margin-left: 30px; /* Reduce left margin on tablets */
+      margin-top: 80px;  /* Reduce top margin for better positioning */
+      margin-bottom: 80px; /* Reduce bottom margin */
+    }
+  
+    .Join1 {
+      width: 90%; /* Make the element take more space on tablet screens */
+    }
+  }
+  
+  /* Mobile View (max-width: 768px) */
+  @media (max-width: 768px) {
+    .Join {
+      margin-left: 20px; /* Further reduce left margin on mobile */
+      margin-top: 60px;  /* Reduce top margin for mobile */
+      margin-bottom: 60px; /* Reduce bottom margin */
+    }
+  
+    .Join1 {
+      width: 100%; /* Set the element to full width on mobile screens */
+    }
+  }
+  
+  /* Small Mobile View (max-width: 480px) */
+  @media (max-width: 480px) {
+    .Join {
+      margin-left: 10px; /* Smaller left margin for small screens */
+      margin-top: 40px;  /* Smaller top margin */
+      margin-bottom: 40px; /* Smaller bottom margin */
+    }
+  
+    .Join1 {
+      width: 100%; /* Full width for small mobile devices */
+    }
+  }
+  

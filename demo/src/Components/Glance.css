@@ -1,0 +1,63 @@
+.Glances {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+  }
+  
+  /* Button Styles */
+  .buttonStyle {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: white;
+    font-weight: bolder;
+  }
+  
+  .buttonStyle:hover {
+    background-color: red;
+    color: white;
+  }
+  
+  /* Responsive Styles */
+  
+  /* Tablet (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .Glances {
+      font-size: 32px; /* Smaller font size for tablet */
+    }
+  
+    .buttonStyle {
+      font-size: 14px; /* Smaller font size for the button */
+      padding: 8px 16px; /* Reduced padding for smaller screens */
+    }
+  }
+  
+  /* Mobile (max-width: 768px) */
+  @media (max-width: 768px) {
+    .Glances {
+      font-size: 28px; /* Smaller font size for mobile */
+    }
+  
+    .buttonStyle {
+      font-size: 12px; /* Even smaller font size for the button */
+      padding: 8px 14px; /* Adjust padding for mobile */
+      margin: 15px; /* Adjust margin for better spacing */
+    }
+  }
+  
+  /* Very Small Mobile (max-width: 480px) */
+  @media (max-width: 480px) {
+    .Glances {
+      font-size: 24px; /* Further reduced font size for very small screens */
+    }
+  
+    .buttonStyle {
+      font-size: 10px; /* Smaller font size for very small screens */
+      padding: 6px 12px; /* Adjust padding for very small screens */
+      margin: 10px; /* Adjust margin for very small screens */
+    }
+  }
+  

@@ -1,0 +1,131 @@
+/* General Footer Styles */
+.footer-container {
+  padding-top: 30px;
+padding-left: 80px;
+padding-right: 80px;
+padding-bottom: 80px;
+  background-color: #f9f7f6;
+  font-family: Arial, sans-serif;
+  
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  max-width: 33%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.footer-left h3,
+.footer-middle h4,
+.footer-right h4 {
+  color: rgb(12, 12, 12);
+  margin-bottom: 10px;
+}
+
+.footer-left p,
+.footer-middle ul {
+  color: #333;
+  line-height: 1.6;
+}
+
+.footer-middle ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-middle li {
+  margin: 8px 0;
+}
+
+.footer-middle a {
+  color: rgb(18, 18, 18);
+  text-decoration: none;
+}
+
+.footer-left .social-links a img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.footer-left .social-links a {
+  display: inline-block;
+}
+
+.footer-right .subscribe-btn {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: #0e0d0d;
+  border: none;
+  cursor: pointer;
+}
+.mail{
+  color: rgb(19, 19, 19);
+}
+/* Responsive Styles */
+
+/* Tablets and smaller screens */
+@media (max-width: 1024px) {
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    max-width: 48%; /* Adjust width to fit 2 columns */
+  }
+}
+
+/* Mobile screens (up to 768px) */
+@media (max-width: 768px) {
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    max-width: 100%; /* Stack items vertically */
+    margin-bottom: 20px;
+  }
+
+  .footer-left h3,
+  .footer-middle h4,
+  .footer-right h4 {
+    font-size: 18px;
+  }
+
+  .footer-left p {
+    font-size: 14px;
+  }
+
+  .footer-left .social-links a img {
+    width: 20px; /* Smaller social icons */
+  }
+
+  .footer-right .subscribe-btn {
+    width: 100%;
+    padding: 12px 20px; /* Full-width subscribe button */
+  }
+}
+
+/* Very Small Mobile Screens */
+@media (max-width: 480px) {
+  .footer-left h3,
+  .footer-middle h4,
+  .footer-right h4 {
+    font-size: 16px; /* Reduce title sizes */
+  }
+
+  .footer-left p {
+    font-size: 12px; /* Smaller text size */
+  }
+
+  .footer-left .social-links a img {
+    width: 18px; /* Even smaller icons for very small screens */
+  }
+
+  .footer-right .subscribe-btn {
+    padding: 10px;
+  }
+}

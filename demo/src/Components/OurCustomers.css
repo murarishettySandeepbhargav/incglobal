@@ -1,0 +1,56 @@
+.We {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bolder;
+  }
+  
+  /* Image styles */
+  .OurImg {
+    width: 80%;
+    margin-left: 150px;
+    height: 400px;
+    margin-bottom: 100px;
+  }
+  
+  /* Responsive Styles */
+  
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .We {
+      font-size: 30px; /* Adjust heading font size */
+    }
+  
+    .OurImg {
+      width: 90%; /* Image takes up more width */
+      margin-left: 50px; /* Reduce left margin */
+      height: auto; /* Maintain aspect ratio */
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .We {
+      font-size: 28px; /* Smaller heading font size for mobile */
+    }
+  
+    .OurImg {
+      width: 100%; /* Full width on small screens */
+      margin-left: 0; /* No margin on small screens */
+      height: 250px; /* Adjust height for smaller screens */
+      margin-bottom: 50px; /* Adjust bottom margin */
+    }
+  }
+  
+  /* Very Small Mobile */
+  @media (max-width: 480px) {
+    .We {
+      font-size: 24px; /* Further reduce heading size for very small screens */
+    }
+  
+    .OurImg {
+      width: 100%; /* Full width */
+      height: 200px; /* Further reduce image height */
+      margin-bottom: 30px; /* Adjust bottom margin */
+    }
+  }
+  

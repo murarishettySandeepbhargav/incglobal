@@ -1,0 +1,65 @@
+.WhyMain {
+  display: flex;
+  justify-content: space-between; /* Space between sections */
+  margin: 80px 200px 0; /* Adjust spacing for desktop */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.Main1 {
+  flex: 1; /* Flexible width for scaling */
+  text-align: center; /* Center-align text for all screens */
+  margin: 0 20px; /* Add side margins for spacing */
+}
+
+.Main1 h1 {
+  font-size: 28px; /* Scaled for larger screens */
+  line-height: 1.5; /* Improved readability */
+  margin: 10px 0; /* Add spacing around the heading */
+}
+
+.Main2 {
+  font-size: 18px; /* Default text size */
+  width: 50%; /* Occupy 50% width on larger screens */
+  margin: 0 auto; /* Center align horizontally */
+  text-align: justify; /* Enhanced readability for paragraphs */
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .WhyMain {
+    margin: 50px 20px; /* Reduce side margins */
+    flex-wrap: wrap; /* Wrap content */
+  }
+
+  .Main1 h1 {
+    font-size: 24px; /* Smaller heading size */
+  }
+
+  .Main2 {
+    font-size: 16px; /* Adjust paragraph size */
+    width: 80%; /* Occupy 80% of the screen */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .WhyMain {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    margin: 20px 10px; /* Reduce overall margin */
+  }
+
+  .Main1 {
+    margin: 10px 0; /* Add some spacing */
+  }
+
+  .Main1 h1 {
+    font-size: 20px; /* Reduce heading size */
+  }
+
+  .Main2 {
+    font-size: 14px; /* Adjust text size for readability */
+    width: 100%; /* Occupy full width */
+    margin: 10px 0; /* Add spacing */
+  }
+}

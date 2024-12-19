@@ -1,0 +1,36 @@
+.Team {
+    width: 100%;
+    height: 600px; /* Default height for larger screens */
+    margin-top: 50px; /* Default top margin */
+    margin-bottom: 100px; /* Default bottom margin */
+  }
+  
+  /* Responsive Styles */
+  
+  /* Tablet (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .Team {
+      height: 500px; /* Reduce height for tablets */
+      margin-top: 40px; /* Reduce top margin for tablets */
+      margin-bottom: 80px; /* Reduce bottom margin for tablets */
+    }
+  }
+  
+  /* Mobile (max-width: 768px) */
+  @media (max-width: 768px) {
+    .Team {
+      height: 400px; /* Further reduce height for mobile */
+      margin-top: 30px; /* Further reduce top margin for mobile */
+      margin-bottom: 60px; /* Further reduce bottom margin for mobile */
+    }
+  }
+  
+  /* Very Small Mobile (max-width: 480px) */
+  @media (max-width: 480px) {
+    .Team {
+      height: 300px; /* Even smaller height for very small screens */
+      margin-top: 20px; /* Even smaller top margin for very small screens */
+      margin-bottom: 40px; /* Even smaller bottom margin for very small screens */
+    }
+  }
+  

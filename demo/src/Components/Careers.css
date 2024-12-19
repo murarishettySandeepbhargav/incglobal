@@ -1,0 +1,46 @@
+.Joindiv {
+  display: flex;
+  margin-bottom: 100px;
+}
+.careersvideo {
+  width: 100%;
+  height: 800px;
+  margin-top: 10px;
+  object-fit: cover; /* Ensures the video fills the area without distortion */
+}
+
+/* Tablet View (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .careersvideo {
+    height: 500px; /* Adjust height for tablets */
+  }
+
+  .Joindiv {
+    flex-direction: column; /* Stack items vertically on tablets */
+    margin-bottom: 50px; /* Reduce margin for tablets */
+  }
+}
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+  .careersvideo {
+    height: 400px; /* Reduce height for mobile screens */
+  }
+
+  .Joindiv {
+    flex-direction: column; /* Stack items vertically on mobile */
+    margin-bottom: 30px; /* Adjust bottom margin for mobile */
+  }
+}
+
+/* Small Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .careersvideo {
+    height: 300px; /* Further reduce height for very small screens */
+  }
+
+  .Joindiv {
+    flex-direction: column; /* Stack items vertically for small screens */
+    margin-bottom: 20px; /* Reduce margin for very small screens */
+  }
+}

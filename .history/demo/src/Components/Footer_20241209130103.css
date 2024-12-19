@@ -1,0 +1,58 @@
+/* For Tablets and Medium Screens */
+@media (max-width: 768px) {
+    .footer {
+      padding: 30px 10px;
+    }
+  
+    .footer-title {
+      font-size: 2rem;
+    }
+  
+    .footer-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .newsletter {
+      flex-direction: column;
+    }
+  
+    .newsletter-input {
+      width: 100%;
+      margin-bottom: 10px;
+      border-radius: 25px;
+    }
+  
+    .newsletter-button {
+      width: 100%;
+      border-radius: 25px;
+    }
+  }
+  
+  /* For Mobile Screens */
+  @media (max-width: 480px) {
+    .footer {
+      padding: 20px 5px;
+    }
+  
+    .footer-title {
+      font-size: 1.5rem;
+    }
+  
+    .circle {
+      width: 80px;
+      height: 80px;
+      font-size: 0.8rem;
+    }
+  
+    .social-icons i {
+      font-size: 1.2rem;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.9rem;
+    }
+  }
+  

@@ -1,0 +1,152 @@
+.Title {
+	text-align: center;
+	font-size: 35px;
+	font-weight: bolder;
+	margin-bottom: 50px;
+  }
+  
+  .Leader {
+	display: flex;
+	margin-left: 100px;
+	margin-bottom: 50px;
+	flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+	justify-content: center; /* Center align items on smaller screens */
+  }
+  
+  .card-container, .front, .back {
+	width: 20rem;
+	height: 20rem;
+  }
+  
+  .card-container {
+	margin-right: 10px;
+	margin-bottom: 20px; /* Added margin bottom for spacing between cards */
+  }
+  
+  .front, .back {
+	box-sizing: border-box;
+	border-radius: 4px;
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, .25);
+	font-family: BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-size: 2rem;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+  }
+  
+  /* front side bg is green gradient */
+  .front {
+	background-image: linear-gradient(to right bottom, #2ecc71, #229955);
+  }
+  
+  /* back side bg is orange gradient */
+  .back {
+	background-image: linear-gradient(to right bottom, #f1c40f, #e67e22);
+  }
+  
+  .card-container {
+	position: relative;
+  }
+  
+  .front, .back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+	overflow: hidden;
+	transition: transform .8s ease;
+  }
+  
+  .back {
+	transform: rotateY(180deg);
+  }
+  
+  .card-container:hover .front {
+	transform: rotateY(-180deg);
+  }
+  
+  .card-container:hover .back {
+	transform: rotateY(0deg);
+  }
+  
+  .card-container {
+	perspective: 75rem;
+  }
+  
+  .LeaderImg {
+	width: 20rem;
+	height: 20rem;
+	object-fit: cover; /* Ensure image maintains aspect ratio */
+  }
+  
+  /* Responsive Styles */
+  
+  /* Tablet View (max-width: 1024px) */
+  @media (max-width: 1024px) {
+	.Leader {
+	  margin-left: 0;
+	  flex-direction: column; /* Stack the leader items vertically */
+	  align-items: center; /* Center align the items */
+	}
+  
+	.card-container {
+	  width: 15rem; /* Adjust card width */
+	  height: 15rem; /* Adjust card height */
+	}
+  
+	.LeaderImg {
+	  width: 20rem; /* Adjust image width */
+	  height: 20rem; /* Adjust image height */
+	}
+  
+	.Title {
+	  font-size: 28px; /* Reduce font size for smaller screens */
+	}
+  }
+  
+  /* Mobile View (max-width: 768px) */
+  @media (max-width: 768px) {
+	.Leader {
+	  margin-left: 0;
+	  flex-direction: column; /* Stack the leader items vertically */
+	  align-items: center; /* Center align the items */
+	}
+  
+	.card-container {
+	  width: 20rem; /* Adjust card width */
+	  height: 20rem; /* Adjust card height */
+	}
+  
+	.LeaderImg {
+	  width: 20rem; /* Adjust image width */
+	  height: 20rem; /* Adjust image height */
+	}
+  
+	.Title {
+	  font-size: 24px; /* Smaller title for mobile */
+	}
+  }
+  
+  /* Small Mobile View (max-width: 480px) */
+  @media (max-width: 480px) {
+	.Leader {
+	  margin-left: 0;
+	  flex-direction: column; /* Stack the leader items vertically */
+	  align-items: center; /* Center align the items */
+	}
+  
+	.card-container {
+	  width: 20rem; /* Adjust card width */
+	  height: 20rem; /* Adjust card height */
+	}
+  
+	.LeaderImg {
+	  width: 20rem; /* Adjust image width */
+	  height: 120rem; /* Adjust image height */
+	}
+  
+	.Title {
+	  font-size: 20px; /* Smaller title for very small screens */
+	}
+  }
+  

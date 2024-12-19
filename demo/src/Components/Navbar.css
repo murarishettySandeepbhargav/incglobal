@@ -1,0 +1,103 @@
+/* General styling */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+ 
+}
+
+/* Navbar customization */
+.navbar {
+  z-index: 1040; /* Ensure navbar stays on top */
+  height: auto;
+  background-color: rgb(254, 254, 254);
+  /* background-color: transparent; */
+}
+
+.inclogo {
+  width: 150px;
+  height: 80px;
+  background-color: rgb(244, 246, 248);
+}
+
+/* Offcanvas customization */
+.offcanvas {
+  background-color: #212529; /* Dark background */
+  color: white; /* Text color */
+  transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid #444;
+}
+
+.offcanvas-body {
+  padding: 20px;
+}
+
+.offcanvas ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.Tags {
+  color: white;
+  text-decoration: none;
+}
+
+.Tags:hover {
+  color: #0dcaf0; /* Highlight color on hover */
+}
+
+/* Offcanvas show/hide animations */
+.offcanvas-end {
+  transform: translateX(100%);
+}
+
+.offcanvas.show {
+  transform: translateX(0);
+}
+
+/* Hide backdrop for better user experience */
+.offcanvas-backdrop {
+  display: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .inclogo {
+    width: 100px; /* Smaller logo */
+  }
+
+  .Link {
+    font-size: 1rem;
+    margin: 8px 0;
+  }
+
+  .Tags {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .inclogo {
+    width: 80px; /* Adjust for very small screens */
+  }
+
+  .Link {
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+
+  .Tags {
+    font-size: 0.9rem;
+  }
+}

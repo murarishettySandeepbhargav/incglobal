@@ -1,0 +1,36 @@
+/* Circular Pointer Styling */
+.pointer {
+  position: absolute;
+  width: 400px; /* Default size for larger screens */
+  height: 400px; /* Default size for larger screens */
+  background-color: #f44336; /* Set your preferred color */
+  border-radius: 50%; /* Makes the pointer circular */
+  pointer-events: none; /* Ensure it doesn’t block mouse events */
+  transform: translate(-50%, -50%); /* Center the pointer on the cursor */
+  opacity: 0.2; /* Subtle transparency for a modern look */
+  transition: width 0.3s ease, height 0.3s ease; /* Smooth resizing on responsive breakpoints */
+}
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .pointer {
+    width: 300px; /* Reduce size for tablets */
+    height: 300px; /* Reduce size for tablets */
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .pointer {
+    width: 200px; /* Further reduce size for mobile */
+    height: 200px; /* Further reduce size for mobile */
+  }
+}
+
+/* Very Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .pointer {
+    width: 150px; /* Even smaller size for very small screens */
+    height: 150px; /* Even smaller size for very small screens */
+  }
+}

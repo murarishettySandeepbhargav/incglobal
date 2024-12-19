@@ -1,0 +1,270 @@
+
+$('#Mainfooterbox').load("../inc/footer.html");
+$(document).ready(function(){
+    // Define partial URL-condition pairs and their corresponding alert messages
+    var partialUrlAlertMap = {
+        "example.com/page1": "Alert message for Page 1",
+        "example.com/page2": "Alert message for Page 2",
+        // Add more partial URL-condition pairs and their corresponding alert messages as needed
+    };
+
+    // Get the current URL
+    var currentURL = window.location.href;
+
+    // Check if the current URL contains any of the partial URLs from partialUrlAlertMap
+    $.each(partialUrlAlertMap, function(partialURL, alertMessage) {
+        if (currentURL.includes(partialURL)) {
+            // If it contains, show the alert with the corresponding message
+            alert(alertMessage);
+            return false; // Exit the loop once a match is found
+        }
+    });
+});
+
+
+//calendly js addclass removeclass
+
+$(document).ready(function(){
+    $(".schedule_header").on( "click", function() {
+        $("html").addClass("schedule_introhead");
+    });
+    $(document).on('click',".calendly-popup-close", function() {
+    $("html").removeClass("schedule_introhead");
+    });
+    $(document).on('click',".calendly-close-overlay", function() {
+        $("html").removeClass("schedule_introhead");
+    });
+});
+
+
+    $(document).ready(function(){
+    const lenis = new Lenis()
+        function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+        
+
+    $(".hasMega").on("mouseenter", function () {
+    $("body").addClass("showOverlay");
+    $(this).addClass("showMega");
+    lenis.stop();
+    });
+
+    $(".hasMega").on("mouseleave", function () {
+    $("body").removeClass("showOverlay");
+    $(this).removeClass("showMega");
+    lenis.start();
+    });
+
+    $(".innerMega").hover(function () {
+        var target = $(this).attr("data-mega");
+        console.log(target);
+        $(".innerMega").removeClass("showingTrig");
+        $(this).addClass("showingTrig");
+        $(".megacompany").removeClass("showInnerMega");
+        $("[data-mega="+target+"]").addClass("showInnerMega");
+        //alert(target);
+    });
+
+    
+    $("#mobilehamburgerbtn").click(function () {  
+    //alert("sasa");
+        $("body").addClass("hidechat");
+        $("#mynavbarmobile").toggleClass("showMobileMenu");
+        $(this).toggleClass("mobileMenuVisible");
+    });
+
+    $(".innerNavMob").click(function () {
+        var target = $(this).attr("data-btn");
+        console.log(target);
+        $(".afterclikinindskeng").removeClass("showInnerMegaMob");
+        $("[data-btn="+target+"]").addClass("showInnerMegaMob");
+        //alert(target);
+    });
+    $(".innerNavMobClose").click(function () {
+        //var target = $(this).attr("data-btn");
+        //console.log(target);
+        $(".afterclikinindskeng").removeClass("showInnerMegaMob");
+        //$("[data-btn="+target+"]").addClass("showInnerMegaMob");
+        //alert(target);
+    });
+});   
+
+
+
+function contentHeight() {
+    var winH = $(window).outerHeight(),
+        headerHei = $("header").outerHeight(),
+        footerHei = $("footer").outerHeight(),
+        contentHei = winH - 60;
+        contentHei2 = winH - 140;
+    $(".companuiesmobilmenu").css("min-height", contentHei);
+    $(".mobileversionnav").css("max-height", contentHei2);
+    }
+    
+    $(document).ready(function() {
+    contentHeight();
+    });
+    $(window).resize(function() {
+    contentHeight();
+    });
+
+
+$(document).ready(function() {
+    $('#Headerhire').load("../inc/headerhire.html", function() {
+        initializeMobileMenu();
+    });
+});
+
+function initializeMobileMenu() {
+    createTag();
+    const menu = document.querySelector(".menu");
+    const menuMain = menu.querySelector(".menu-main");
+    const goBack = menu.querySelector(".go-back");
+    const menuTrigger = document.querySelector(".mobile-menu-trigger");
+    const closeMenu = menu.querySelector(".mobile-menu-close");
+    let subMenu;
+
+    // Attach event listeners
+    menuMain.addEventListener("click", (e) => {
+        if (!menu.classList.contains("active")) {
+            return;
+        }
+        if (e.target.closest(".menu-item-has-children")) {
+            const hasChildren = e.target.closest(".menu-item-has-children");
+            showSubMenu(hasChildren);
+        }
+    });
+
+    goBack.addEventListener("click", () => {
+        hideSubMenu();
+    });
+
+    menuTrigger.addEventListener("click", () => {
+        toggleMenu();
+    });
+
+    closeMenu.addEventListener("click", () => {
+        toggleMenu();
+    });
+
+    document.querySelector(".menu-overlay").addEventListener("click", () => {
+        toggleMenu();
+    });
+
+    function toggleMenu() {
+        menu.classList.toggle("active");
+        document.querySelector(".menu-overlay").classList.toggle("active");
+    }
+
+    function showSubMenu(hasChildren) {
+        subMenu = hasChildren.querySelector(".sub-menu");
+        subMenu.classList.add("active");
+        subMenu.style.animation = "slideDown 0.5s ease forwards";
+        const menuTitle = hasChildren.querySelector("li")?.parentNode.childNodes[0].innerHTML;
+        // menu.querySelector(".current-menu-title").innerHTML = menuTitle;
+        menu.querySelector(".mobile-menu-head").classList.add("active");
+    }
+
+    function hideSubMenu() {
+        subMenu.style.animation = "slideUp 0.5s ease forwards";
+        setTimeout(() => {
+            subMenu.classList.remove("active");
+        }, 300);
+        // menu.querySelector(".current-menu-title").innerHTML = "";
+        menu.querySelector(".mobile-menu-head").classList.remove("active");
+    }
+
+    window.onresize = function () {
+        if (this.innerWidth > 991) {
+            if (menu.classList.contains("active")) {
+                toggleMenu();
+            }
+        }
+    }
+}    
+
+// Add Query Parameters to Links Based on Page URL
+function createTag(){
+    $(document).ready(function(){
+        // Define URL-condition pairs and their corresponding alert messages
+        var partialUrlAlertMap = {
+            "salesforce-developers.html": "?type=salesforce",
+            "python-developers.html": "?type=python",
+            "swiftui-developers.html": "?type=swift",
+            "fullstack-developers.html": "?type=fullstack",
+            "remote-developers.html": "?type=remote",
+            "android-developers.html": "?type=android",
+            "mean-stack-developers.html": "?type=mean",
+            "cloud-engineers.html": "?type=cloud",
+            "php-developers.html": "?type=php",
+            "golang-developers.html": "?type=golang",
+            "artificial-intelligence-engineers.html": "?type-ai",
+            "java-developers.html": "?type=java",
+            "react-native-developers.html": "?type=reactnative",
+            "azure-developers.html": "?type=azure",
+            "react-developers.html": "?type=react",
+            "sap-developers.html": "?type=sap",
+            "qa-engineers.html": "?type=qa",
+            "devops-engineers.html": "?type=devops",
+            "ios-developers.html": "?type=ios",
+            "machine-learning-engineers.html": "?type=ml",
+            "dynamics365-developers.html": "?type=dynamics365",
+            "ruby-on-rails-developers.html": "?type=ror",
+            "angular-developers.html": "?type=angular",
+            "ionic-developers.html": "?type=ionic",
+            "kotlin-developers.html": "?type=kotlin",
+            "wordpress-developers.html": "?type=wordpress",
+            "data-analysts.html": "?type=dataanalyst",
+            "xamarin-developers.html": "?type=xamarin",
+            "magento-developers.html": "?type=magento",
+            "laravel-developers.html": "?type=laravel",
+            "nodejs-developers.html": "?type=node",
+            "flask-developers.html": "?type=flask",
+            "flutter-developers.html": "?type=flutter",
+            "dotnet-developers.html": "?type=dotnet",
+            "scala-developers.html": "?type=scala",
+            "metaverse-developers.html": "?type=scala",
+            "shopify-developers.html": "?type=shopify",
+            "mern-developers.html": "?type=mern",
+            "blockchain-developers.html": "?type=blockchain",
+            "django-developers.html": "?type=django",
+            "healthcare-developers.html": "?type=healthcare",
+            "fintech-developers.html": "?type=fintech",
+            "reviewsnew.html": "?type=reviews",
+            "startup-developers.html": "?type=startup",
+            "servicenow-developers.html": "?type=servicenow",
+            "workday-developers.html": "?type=workday",
+            "generative-ai-engineers.html": "?type=generative",
+            "ui-ux-designers.html": "?type=uiux",
+            "llm-developers.html": "?type=llm",
+            "events": "?type=events",
+            "reviews.html": "?type=reviews",
+            "career.html": "?type=career",
+            "contact-us.html": "?type=contactus",
+            "it-staff-augmentation.html": "?type=itstaff",
+            "privacy-policy.html": "?type=privacypolicy"
+        };
+    
+        // Get the current URL
+        var currentURL = window.location.href;
+    
+        //console.log(currentURL);
+        $.each(partialUrlAlertMap, function(partialURL, alertMessage) {
+            if (currentURL.includes(partialURL)) {
+                // If it contains, show the alert with the corresponding message
+                //console.log(alertMessage);
+                $("a.ctaHeader").each(function() {
+                    var $this = $(this);       
+                    var _href = $this.attr("href"); 
+                    var res = $this.attr("href", _href + alertMessage);
+                    //console.log(res);
+                    });
+                return false; // Exit the loop once a match is found
+            }
+        });
+    });
+}

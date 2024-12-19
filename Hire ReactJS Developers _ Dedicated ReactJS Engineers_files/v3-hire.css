@@ -1,0 +1,8 @@
+.bg-linear-gradient-health {
+    background: linear-gradient(89.26deg, #084BFF 38.06%, #F24B8B 63.86%), linear-gradient(0deg, #1D2434, #1D2434);
+    background-clip: text;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    font-family: Gabarito;
+    font-style: normal;
+}

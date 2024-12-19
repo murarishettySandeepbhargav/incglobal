@@ -1,0 +1,33 @@
+.Servicesmain {
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-between; /* Adjust the space between items */
+  }
+  
+  /* Tablet View (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .Servicesmain {
+      flex-direction: column; /* Stack items vertically on tablets */
+      margin-top: 50px; /* Adjust top margin for smaller screens */
+      align-items: center; /* Center items horizontally */
+    }
+  }
+  
+  /* Mobile View (max-width: 768px) */
+  @media (max-width: 768px) {
+    .Servicesmain {
+      flex-direction: column; /* Stack items vertically on mobile */
+      margin-top: 30px; /* Reduce top margin */
+      align-items: center; /* Center items horizontally */
+    }
+  }
+  
+  /* Small Mobile View (max-width: 480px) */
+  @media (max-width: 480px) {
+    .Servicesmain {
+      flex-direction: column; /* Stack items vertically on very small screens */
+      margin-top: 20px; /* Reduce top margin further for very small screens */
+      align-items: center; /* Ensure items are centered */
+    }
+  }
+  

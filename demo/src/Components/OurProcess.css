@@ -1,0 +1,83 @@
+.Process {
+  display: flex;
+  margin-left: 80px; /* Default left margin */
+  margin-bottom: 100px; /* Default bottom margin */
+  width: 90%; /* Default width */
+  height: auto; /* Ensure height is flexible */
+  margin-left: 140px; /* Adjust left margin for larger screens */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+/* Responsive Styles */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .Process {
+    margin-left: 50px; /* Reduced margin on tablet */
+    margin-right: 20px; /* Add some margin on the right side */
+    flex-direction: column; /* Stack items vertically on tablets */
+    width: 95%; /* Make the width 95% on tablet screens */
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .Process {
+    margin-left: 20px; /* Smaller left margin on mobile */
+    margin-right: 20px; /* Add some right margin on mobile */
+    flex-direction: column; /* Stack items vertically on mobile */
+    width: 100%; /* Full width on mobile */
+  }
+}
+
+/* Very Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .Process {
+    margin-left: 10px; /* Further reduce the left margin */
+    margin-right: 10px; /* Further reduce the right margin */
+    flex-direction: column; /* Ensure items stack vertically */
+    width: 100%; /* Ensure it takes the full width */
+  }
+}
+
+.Process1 {
+  padding: 20px;
+  margin-right: 20px;
+  background-color: rgba(159, 152, 152, 0.077);
+  width: 30%; /* Default width for larger screens */
+  margin-bottom: 20px; /* Bottom margin for spacing */
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .Process1 {
+    width: 45%; /* Increase width for tablet screens */
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .Process1 {
+    width: 100%; /* Full width on mobile */
+    margin-right: 0; /* Remove right margin on mobile */
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 480px) {
+  .Process1 {
+    width: 100%; /* Full width on very small screens */
+    margin-right: 0; /* Remove right margin */
+  }
+}
+
+.Our {
+  margin-left: 140px; /* Default left margin */
+}
+
+/* Responsive for .Our */
+@media (max-width: 768px) {
+  .Our {
+    margin-left: 20px; /* Reduce margin on smaller screens */
+  }
+}

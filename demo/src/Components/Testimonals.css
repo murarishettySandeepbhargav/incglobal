@@ -1,0 +1,100 @@
+.Testimonals {
+    margin-left: 140px;
+    margin-top: 100px;
+    text-align: center; /* Center text for better alignment on smaller screens */
+  }
+  
+  .Test1 {
+    font-size: 35px;
+    font-weight: bolder;
+  }
+  
+  /* Adjusting the .Test2 section */
+  .Test2 {
+    width: 650px;
+    font-size: 20px;
+    margin: 0 auto; /* Center the text block */
+  }
+  
+  /* Image styling */
+  .Teamimg {
+    max-width: 100%;
+    margin-right: 300px;
+    margin-top: 80px;
+    height: 600px;
+    margin-bottom: 80px;
+    position: relative;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
+  
+  /* Responsive Styles */
+  
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .Testimonals {
+      margin-left: 40px;
+      margin-top: 80px;
+    }
+  
+    .Test1 {
+      font-size: 30px; /* Slightly smaller heading */
+    }
+  
+    .Test2 {
+      width: 80%; /* Increase width on smaller devices */
+      font-size: 18px; /* Slightly smaller font */
+      margin: 20px auto; /* Center the content */
+    }
+  
+    .Teamimg {
+      margin-right: 100px; /* Reduce right margin on tablets */
+      height: 500px; /* Adjust height */
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .Testimonals {
+      margin-left: 20px;
+      margin-top: 60px;
+    }
+  
+    .Test1 {
+      font-size: 26px; /* Smaller heading size */
+    }
+  
+    .Test2 {
+      width: 90%; /* Occupy more width on mobile */
+      font-size: 16px; /* Smaller font for readability */
+      margin: 20px auto;
+    }
+  
+    .Teamimg {
+      margin-right: 0; /* No right margin on mobile */
+      margin-top: 40px; /* Reduced margin */
+      height: 400px; /* Adjust image height */
+    }
+  }
+  
+  /* Small mobile devices */
+  @media (max-width: 480px) {
+    .Testimonals {
+      margin-left: 10px;
+      margin-top: 40px;
+    }
+  
+    .Test1 {
+      font-size: 22px; /* Even smaller heading */
+    }
+  
+    .Test2 {
+      width: 95%; /* Full width on very small screens */
+      font-size: 14px; /* Adjust font size */
+      margin: 10px auto; /* Center text */
+    }
+  
+    .Teamimg {
+      height: 300px; /* Adjust height further for smaller screens */
+    }
+  }
+  

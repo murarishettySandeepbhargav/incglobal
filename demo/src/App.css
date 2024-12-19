@@ -1,0 +1,77 @@
+/* Preloader Styles */
+.preloader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e30613; /* Red background */
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Spinner Animation */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ffffff;
+  border-top: 6px solid #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Preloader Text */
+.preloader h2 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #ffffff;
+    border-top: 5px solid #333;
+  }
+
+  .preloader h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .spinner {
+    width: 30px;
+    height: 30px;
+    border: 4px solid #ffffff;
+    border-top: 4px solid #333;
+  }
+
+  .preloader h2 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .spinner {
+    width: 70px;
+    height: 70px;
+    border: 8px solid #ffffff;
+    border-top: 8px solid #333;
+  }
+
+  .preloader h2 {
+    font-size: 2rem;
+  }
+}

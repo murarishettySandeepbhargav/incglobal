@@ -1,0 +1,55 @@
+.Trending {
+  margin-left: 140px;
+  margin-top: 100px;
+  flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+  justify-content: center; /* Center-align content on smaller screens */
+}
+
+.Trend {
+  font-size: 35px;
+  font-weight: bolder;
+  text-align:left;
+  /* Center-align the heading */
+  margin-bottom: 20px; /* Add space below the heading */
+}
+
+.Trend1 {
+  width: 450px;
+  font-size: 20px;
+  text-align: center; /* Justify text for better readability */
+  margin-top: 10px; /* Add margin to the top for spacing */
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .Trending {
+    margin-left: 20px; /* Reduce left margin */
+    margin-top: 60px; /* Reduce top margin */
+  }
+
+  .Trend {
+    font-size: 28px; /* Adjust heading size for tablets */
+  }
+
+  .Trend1 {
+    width: 60%; /* Occupy 80% of the screen width */
+    font-size: 18px; /* Adjust paragraph font size */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .Trending {
+    margin-left: 10px; /* Remove left margin for mobile */
+    margin-top: 40px; /* Reduce top margin */
+  }
+
+  .Trend {
+    font-size: 22px; /* Smaller heading for mobile */
+  }
+
+  .Trend1 {
+    width: 60%; /* Full width on small screens */
+    font-size: 16px; /* Smaller text size for mobile */
+  }
+}

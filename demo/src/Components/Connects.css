@@ -1,0 +1,104 @@
+/* General Container */
+.connects-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Title Section */
+.connect-title {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.connect {
+  font-weight: bolder;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Labs Description */
+.labs-description {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* Locations and Form Container */
+.locations-and-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+/* Locations Section */
+.locations {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.location {
+  border: 1px solid silver;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: silver;
+}
+
+.location h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-number {
+  color: red;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Contact Form Section */
+.contact-form-wrapper {
+  flex: 1 1 300px;
+  max-width: 600px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .connect {
+    font-size: 2rem;
+  }
+
+  .labs-description {
+    font-size: 1rem;
+  }
+
+  .locations-and-form {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .connect {
+    font-size: 1.5rem;
+  }
+
+  .labs-description {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .location {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .contact-form-wrapper {
+    width: 100%;
+  }
+}

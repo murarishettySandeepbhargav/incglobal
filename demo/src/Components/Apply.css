@@ -1,0 +1,136 @@
+/* Styling the form container */
+.form-container {
+  background:silver;
+  border-radius: 10px;
+  padding: 40px;
+  width: 500px;
+  margin: auto;
+  margin-top: 100px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling the form itself */
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #333;
+  color: #fff;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+button.submit-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to right, #d01f1f, #e94545);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button.submit-button:hover {
+  background: linear-gradient(to right, #e94545, #d01f1f);
+}
+
+.error {
+  font-size: 12px;
+  color: #f00;
+  margin-top: 5px;
+}
+
+/* Responsive Styles */
+
+/* Tablet View (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .form-container {
+    width: 80%; /* Make the form container take more width on tablets */
+    margin-top: 60px; /* Reduce top margin for tablets */
+  }
+
+  .custom-form {
+    gap: 12px; /* Reduce gap between form elements */
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+
+  button.submit-button {
+    font-size: 14px; /* Smaller button font size */
+  }
+}
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+  .form-container {
+    width: 90%; /* Form container width increased for mobile */
+    padding: 30px; /* Reduced padding for smaller screens */
+    margin-top: 40px; /* Reduce top margin on mobile */
+  }
+
+  .custom-form {
+    gap: 10px; /* Further reduce gap between form elements */
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 6px; /* Reduce padding for small screens */
+  }
+
+  button.submit-button {
+    padding: 8px; /* Reduced button padding */
+    font-size: 14px; /* Adjust button font size */
+  }
+}
+
+/* Small Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .form-container {
+    width: 100%; /* Full width on very small screens */
+    padding: 20px; /* Further reduce padding */
+    margin-top: 20px; /* Smaller top margin */
+  }
+
+  .custom-form {
+    gap: 8px; /* Reduce gap further on small screens */
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 5px; /* Further reduce input padding */
+  }
+
+  button.submit-button {
+    font-size: 12px; /* Smaller button font size */
+    padding: 6px; /* Smaller button padding */
+  }
+}
